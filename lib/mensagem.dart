@@ -39,7 +39,7 @@ class _MensagemState extends State<Mensagem> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView( // evita overflow
+    return SingleChildScrollView( 
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -107,7 +107,6 @@ class _MensagemState extends State<Mensagem> {
 
           SizedBox(height: 30),
 
-          // 🔽 CARTÃO APARECE AQUI
           if (destinatario.isNotEmpty)
             Container(
               width: 320,
@@ -126,7 +125,6 @@ class _MensagemState extends State<Mensagem> {
               child: Stack(
                 children: [
 
-                  // Topo esquerdo (Destinatário)
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text(
@@ -138,7 +136,6 @@ class _MensagemState extends State<Mensagem> {
                     ),
                   ),
 
-                  // Centro (Mensagem)
                   Center(
                     child: Text(
                       mensagem,
@@ -151,7 +148,6 @@ class _MensagemState extends State<Mensagem> {
                     ),
                   ),
 
-                  // Inferior direito (Remetente)
                   Align(
                     alignment: Alignment.bottomRight,
                     child: Text(
